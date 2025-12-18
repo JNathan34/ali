@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Plans - FitWell UK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        /* Inline specific styles for Meal Plan grid if needed, generally in CSS */
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon">
+                    <i class="ph-fill ph-heart-beat"></i>
+                </div>
+                <span class="logo-text">FitWell UK</span>
+                <button id="close-sidebar" class="mobile-only-btn">
+                    <i class="ph ph-x"></i>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item">
+                    <i class="ph ph-squares-four"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="workout-videos.html" class="nav-item">
+                    <i class="ph ph-play-circle"></i>
+                    <span>Workout Videos</span>
+                </a>
+                <a href="exercise-tips.html" class="nav-item">
+                    <i class="ph ph-lightning"></i>
+                    <span>Exercise Tips</span>
+                </a>
+                <a href="meal-plans.html" class="nav-item active">
+                    <i class="ph ph-bowl-food"></i>
+                    <span>Meal Plans</span>
+                </a>
+                <a href="nutrition-guide.html" class="nav-item">
+                    <i class="ph ph-book-open"></i>
+                    <span>Nutrition Guide</span>
+                </a>
+                <a href="wellness-tips.html" class="nav-item">
+                    <i class="ph ph-plant"></i>
+                    <span>Wellness Tips</span>
+                </a>
+                <a href="motivation.html" class="nav-item">
+                    <i class="ph ph-star"></i>
+                    <span>Motivation</span>
+                </a>
+                <a href="calendar.html" class="nav-item">
+                    <i class="ph ph-calendar-blank"></i>
+                    <span>Calendar</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="bottom-nav">
+                    <a href="#" class="nav-item">
+                        <i class="ph ph-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="ph ph-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-nav">
+                <button id="menu-toggle" class="mobile-only-btn">
+                    <i class="ph ph-list"></i>
+                </button>
+                <div class="search-bar">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" placeholder="Search recipes..." id="searchInput">
+                </div>
+                <div class="user-actions">
+                    <button class="icon-btn notification-btn">
+                        <i class="ph ph-bell"></i>
+                        <span class="badge"></span>
+                    </button>
+                    <div class="user-profile">
+                        <div class="user-info">
+                            <span class="name">Sarah Jenkins</span>
+                            <span class="role">Member</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=60" alt="User Avatar" class="avatar">
+                        <i class="ph ph-caret-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-scroll">
+                <div class="page-container">
+                    <div class="page-header">
+                        <h2>Weekly Meal Plan</h2>
+                        <div class="date-selector">
+                            <button class="icon-btn"><i class="ph ph-caret-left"></i></button>
+                            <span>December 11 - 17, 2025</span>
+                            <button class="icon-btn"><i class="ph ph-caret-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="meal-grid">
+                        <div class="meal-column">
+                            <h3>Breakfast</h3>
+                            <div class="meal-card">
+                                <img src="attached_assets/generated_images/meal_plan_breakfast.png" alt="Breakfast">
+                                <div class="meal-info">
+                                    <h4>Berry Oatmeal Bowl</h4>
+                                    <span class="cal-tag">350 kcal</span>
+                                    <button class="btn-check"><i class="ph ph-check"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="meal-column">
+                            <h3>Lunch</h3>
+                            <div class="meal-card">
+                                <img src="attached_assets/generated_images/meal_plan_lunch.png" alt="Lunch">
+                                <div class="meal-info">
+                                    <h4>Grilled Chicken Salad</h4>
+                                    <span class="cal-tag">450 kcal</span>
+                                    <button class="btn-check"><i class="ph ph-check"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="meal-column">
+                            <h3>Dinner</h3>
+                            <div class="meal-card">
+                                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&auto=format&fit=crop&q=60" alt="Dinner">
+                                <div class="meal-info">
+                                    <h4>Salmon & Asparagus</h4>
+                                    <span class="cal-tag">550 kcal</span>
+                                    <button class="btn-check"><i class="ph ph-check"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="meal-column">
+                            <h3>Snacks</h3>
+                            <div class="meal-card">
+                                <img src="https://images.unsplash.com/photo-1598511726623-d09dc48113c5?w=400&auto=format&fit=crop&q=60" alt="Snack">
+                                <div class="meal-info">
+                                    <h4>Greek Yogurt & Nuts</h4>
+                                    <span class="cal-tag">200 kcal</span>
+                                    <button class="btn-check"><i class="ph ph-check"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

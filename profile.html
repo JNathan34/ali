@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - FitWell UK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon">
+                    <i class="ph-fill ph-heart-beat"></i>
+                </div>
+                <span class="logo-text">FitWell UK</span>
+                <button id="close-sidebar" class="mobile-only-btn">
+                    <i class="ph ph-x"></i>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item">
+                    <i class="ph ph-squares-four"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="workout-videos.html" class="nav-item">
+                    <i class="ph ph-play-circle"></i>
+                    <span>Workout Videos</span>
+                </a>
+                <a href="exercise-tips.html" class="nav-item">
+                    <i class="ph ph-lightning"></i>
+                    <span>Exercise Tips</span>
+                </a>
+                <a href="meal-plans.html" class="nav-item">
+                    <i class="ph ph-bowl-food"></i>
+                    <span>Meal Plans</span>
+                </a>
+                <a href="nutrition-guide.html" class="nav-item">
+                    <i class="ph ph-book-open"></i>
+                    <span>Nutrition Guide</span>
+                </a>
+                <a href="wellness-tips.html" class="nav-item">
+                    <i class="ph ph-plant"></i>
+                    <span>Wellness Tips</span>
+                </a>
+                <a href="motivation.html" class="nav-item">
+                    <i class="ph ph-star"></i>
+                    <span>Motivation</span>
+                </a>
+                <a href="calendar.html" class="nav-item">
+                    <i class="ph ph-calendar-blank"></i>
+                    <span>Calendar</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="bottom-nav">
+                    <a href="settings.html" class="nav-item">
+                        <i class="ph ph-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                    <a href="profile.html" class="nav-item active">
+                        <i class="ph ph-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-nav">
+                <button id="menu-toggle" class="mobile-only-btn">
+                    <i class="ph ph-list"></i>
+                </button>
+                <div class="page-title-mobile">Profile</div>
+                <div class="user-actions ml-auto">
+                    <button class="icon-btn notification-btn" id="notif-btn">
+                        <i class="ph ph-bell"></i>
+                        <span class="badge"></span>
+                        <div class="notification-dropdown" id="notif-dropdown">
+                            <div class="notif-header">Notifications</div>
+                            <div class="notif-list">
+                                <div class="notif-item unread">
+                                    <div class="notif-icon blue"><i class="ph-fill ph-drop"></i></div>
+                                    <div class="notif-text">
+                                        <p>Time to drink water!</p>
+                                        <span>2 min ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-item">
+                                    <div class="notif-icon purple"><i class="ph-fill ph-trophy"></i></div>
+                                    <div class="notif-text">
+                                        <p>New badge unlocked: Early Bird</p>
+                                        <span>2 hours ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="user-profile">
+                        <div class="user-info">
+                            <span class="name" id="header-name">Sarah Jenkins</span>
+                            <span class="role">Member</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=60" alt="User Avatar" class="avatar" id="header-avatar">
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-scroll">
+                <div class="page-container">
+                    <div class="page-header">
+                        <h2>My Profile</h2>
+                        <p class="subtitle">Manage your personal information and goals.</p>
+                    </div>
+
+                    <div class="profile-grid">
+                        <div class="profile-card main-info">
+                            <div class="avatar-upload">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&auto=format&fit=crop&q=60" alt="Profile" id="profile-img-preview">
+                                <button class="btn-icon-upload"><i class="ph ph-camera"></i></button>
+                            </div>
+                            <form id="profile-form">
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text" id="profile-name" value="Sarah Jenkins">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" id="profile-email" value="sarah.j@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label>Bio</label>
+                                    <textarea id="profile-bio" rows="3">Fitness enthusiast loving the journey!</textarea>
+                                </div>
+                                <button type="submit" class="btn-primary">Save Changes</button>
+                            </form>
+                        </div>
+
+                        <div class="profile-card stats-overview">
+                            <h3>Current Stats</h3>
+                            <div class="form-group">
+                                <label>Weight (kg)</label>
+                                <input type="number" id="profile-weight" value="64.5">
+                            </div>
+                            <div class="form-group">
+                                <label>Height (cm)</label>
+                                <input type="number" id="profile-height" value="168">
+                            </div>
+                            <div class="form-group">
+                                <label>Goal Weight (kg)</label>
+                                <input type="number" id="profile-goal" value="60">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - FitWell UK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon">
+                    <i class="ph-fill ph-heart-beat"></i>
+                </div>
+                <span class="logo-text">FitWell UK</span>
+                <button id="close-sidebar" class="mobile-only-btn">
+                    <i class="ph ph-x"></i>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item">
+                    <i class="ph ph-squares-four"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="workout-videos.html" class="nav-item">
+                    <i class="ph ph-play-circle"></i>
+                    <span>Workout Videos</span>
+                </a>
+                <a href="exercise-tips.html" class="nav-item">
+                    <i class="ph ph-lightning"></i>
+                    <span>Exercise Tips</span>
+                </a>
+                <a href="meal-plans.html" class="nav-item">
+                    <i class="ph ph-bowl-food"></i>
+                    <span>Meal Plans</span>
+                </a>
+                <a href="nutrition-guide.html" class="nav-item">
+                    <i class="ph ph-book-open"></i>
+                    <span>Nutrition Guide</span>
+                </a>
+                <a href="wellness-tips.html" class="nav-item">
+                    <i class="ph ph-plant"></i>
+                    <span>Wellness Tips</span>
+                </a>
+                <a href="motivation.html" class="nav-item">
+                    <i class="ph ph-star"></i>
+                    <span>Motivation</span>
+                </a>
+                <a href="calendar.html" class="nav-item active">
+                    <i class="ph ph-calendar-blank"></i>
+                    <span>Calendar</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="bottom-nav">
+                    <a href="settings.html" class="nav-item">
+                        <i class="ph ph-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                    <a href="profile.html" class="nav-item">
+                        <i class="ph ph-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-nav">
+                <button id="menu-toggle" class="mobile-only-btn">
+                    <i class="ph ph-list"></i>
+                </button>
+                <div class="search-bar">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" placeholder="Search schedule..." id="searchInput">
+                </div>
+                <div class="user-actions">
+                    <button class="icon-btn notification-btn" id="notif-btn">
+                        <i class="ph ph-bell"></i>
+                        <span class="badge"></span>
+                        <div class="notification-dropdown" id="notif-dropdown">
+                            <div class="notif-header">Notifications</div>
+                            <div class="notif-list">
+                                <div class="notif-item unread">
+                                    <div class="notif-icon blue"><i class="ph-fill ph-drop"></i></div>
+                                    <div class="notif-text">
+                                        <p>Time to drink water!</p>
+                                        <span>2 min ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="user-profile">
+                        <div class="user-info">
+                            <span class="name" id="header-name">Sarah Jenkins</span>
+                            <span class="role">Member</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=60" alt="User Avatar" class="avatar" id="header-avatar">
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-scroll">
+                <div class="page-container">
+                    <div class="page-header">
+                        <h2>Schedule</h2>
+                        <div class="date-controls">
+                            <button class="btn-outline">Today</button>
+                            <div class="month-nav">
+                                <button class="icon-btn"><i class="ph ph-caret-left"></i></button>
+                                <span class="current-month">December 2025</span>
+                                <button class="icon-btn"><i class="ph ph-caret-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calendar-grid">
+                        <div class="calendar-header-row">
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                            <div>Sun</div>
+                        </div>
+                        <div class="calendar-days" id="calendar-days">
+                            <!-- JS will populate -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Modal -->
+            <div class="modal-overlay" id="event-modal">
+                <div class="modal-card">
+                    <div class="modal-header">
+                        <h3>Add Event</h3>
+                        <button class="close-modal"><i class="ph ph-x"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Event Name</label>
+                            <input type="text" id="event-title" placeholder="e.g. Morning Run">
+                        </div>
+                        <div class="form-group">
+                            <label>Type</label>
+                            <select id="event-type">
+                                <option value="workout">Workout</option>
+                                <option value="meal">Meal</option>
+                                <option value="wellness">Wellness</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn-text close-modal">Cancel</button>
+                        <button class="btn-primary" id="save-event-btn">Save Event</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

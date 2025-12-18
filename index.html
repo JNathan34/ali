@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness & Wellness UK - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon">
+                    <i class="ph-fill ph-heart-beat"></i>
+                </div>
+                <span class="logo-text">FitWell UK</span>
+                <button id="close-sidebar" class="mobile-only-btn">
+                    <i class="ph ph-x"></i>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item active">
+                    <i class="ph ph-squares-four"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="workout-videos.html" class="nav-item">
+                    <i class="ph ph-play-circle"></i>
+                    <span>Workout Videos</span>
+                </a>
+                <a href="exercise-tips.html" class="nav-item">
+                    <i class="ph ph-lightning"></i>
+                    <span>Exercise Tips</span>
+                </a>
+                <a href="meal-plans.html" class="nav-item">
+                    <i class="ph ph-bowl-food"></i>
+                    <span>Meal Plans</span>
+                </a>
+                <a href="nutrition-guide.html" class="nav-item">
+                    <i class="ph ph-book-open"></i>
+                    <span>Nutrition Guide</span>
+                </a>
+                <a href="wellness-tips.html" class="nav-item">
+                    <i class="ph ph-plant"></i>
+                    <span>Wellness Tips</span>
+                </a>
+                <a href="motivation.html" class="nav-item">
+                    <i class="ph ph-star"></i>
+                    <span>Motivation</span>
+                </a>
+                <a href="calendar.html" class="nav-item">
+                    <i class="ph ph-calendar-blank"></i>
+                    <span>Calendar</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="bottom-nav">
+                    <a href="#" class="nav-item">
+                        <i class="ph ph-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="ph ph-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-nav">
+                <button id="menu-toggle" class="mobile-only-btn">
+                    <i class="ph ph-list"></i>
+                </button>
+                <div class="search-bar">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" placeholder="Search workouts, recipes, tips..." id="searchInput">
+                </div>
+                <div class="user-actions">
+                    <button class="icon-btn notification-btn">
+                        <i class="ph ph-bell"></i>
+                        <span class="badge"></span>
+                    </button>
+                    <div class="user-profile">
+                        <div class="user-info">
+                            <span class="name">Sarah Jenkins</span>
+                            <span class="role">Member</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=60" alt="User Avatar" class="avatar">
+                        <i class="ph ph-caret-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-scroll">
+                <div class="dashboard-grid">
+                    <!-- Featured Workout Section -->
+                    <section class="hero-section">
+                        <div class="hero-card">
+                            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&auto=format&fit=crop&q=80" alt="Workout" class="hero-bg">
+                            <div class="hero-overlay"></div>
+                            <div class="hero-content">
+                                <span class="tag">Daily Featured</span>
+                                <h1>Morning Full-Body Burn</h1>
+                                <div class="meta-tags">
+                                    <span><i class="ph ph-clock"></i> 45 min</span>
+                                    <span><i class="ph ph-chart-bar"></i> Intermediate</span>
+                                    <span><i class="ph ph-barbell"></i> No Equipment</span>
+                                </div>
+                                <div class="tags-row">
+                                    <span class="pill">HIIT</span>
+                                    <span class="pill">Strength</span>
+                                    <span class="pill">Cardio</span>
+                                </div>
+                                <a href="workout-videos.html" class="btn-primary"><i class="ph-fill ph-play"></i> Start Workout</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Daily Metrics Section -->
+                    <section class="stats-section">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <div class="icon-box blue">
+                                    <i class="ph-fill ph-sneaker-move"></i>
+                                </div>
+                                <span class="trend up"><i class="ph ph-arrow-up-right"></i> 12%</span>
+                            </div>
+                            <p class="label">Steps Today</p>
+                            <h3>8,432 <span class="unit">steps</span></h3>
+                        </div>
+
+                        <div class="stat-card graph-card">
+                            <div class="stat-header">
+                                <div>
+                                    <p class="label">Calories Burned</p>
+                                    <h3>1,840 <span class="unit">kcal</span></h3>
+                                </div>
+                                <div class="icon-box orange">
+                                    <i class="ph-fill ph-fire"></i>
+                                </div>
+                            </div>
+                            <canvas id="caloriesChart" height="60"></canvas>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <div class="icon-box purple">
+                                    <i class="ph-fill ph-moon-stars"></i>
+                                </div>
+                                <span class="trend up"><i class="ph ph-arrow-up-right"></i> 4%</span>
+                            </div>
+                            <p class="label">Sleep Score</p>
+                            <h3>85 <span class="unit">/ 100</span></h3>
+                        </div>
+                    </section>
+
+                    <!-- Exercise Tips & Meals Grid -->
+                    <div class="split-section">
+                        <!-- Exercise Tips -->
+                        <section class="tips-section">
+                            <div class="section-header">
+                                <h3>Exercise Tips</h3>
+                                <a href="exercise-tips.html" class="view-all">View Library <i class="ph ph-caret-right"></i></a>
+                            </div>
+                            
+                            <div class="tip-banner">
+                                <div class="tip-content">
+                                    <span class="pill white">Daily Tip</span>
+                                    <h4>Post-Workout Recovery</h4>
+                                    <p>Stretch major muscle groups for 10 mins after workout to reduce soreness.</p>
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=400&auto=format&fit=crop&q=60" alt="Yoga" class="tip-image">
+                            </div>
+
+                            <div class="tips-grid">
+                                <div class="mini-card">
+                                    <img src="https://images.unsplash.com/photo-1544367563-12123d8965cd?w=400&auto=format&fit=crop&q=60" alt="Stretch">
+                                    <div class="mini-meta">5 min</div>
+                                    <h5>Morning Stretch</h5>
+                                </div>
+                                <div class="mini-card">
+                                    <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=400&auto=format&fit=crop&q=60" alt="Core">
+                                    <div class="mini-meta">10 min</div>
+                                    <h5>Core Blast</h5>
+                                </div>
+                                <div class="mini-card">
+                                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&auto=format&fit=crop&q=60" alt="Meditate">
+                                    <div class="mini-meta">15 min</div>
+                                    <h5>Meditation</h5>
+                                </div>
+                                <div class="mini-card">
+                                    <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=400&auto=format&fit=crop&q=60" alt="Yoga">
+                                    <div class="mini-meta">20 min</div>
+                                    <h5>Power Yoga</h5>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Meal Plans -->
+                        <section class="meals-section">
+                            <div class="section-header">
+                                <h3>Featured Recipe</h3>
+                            </div>
+                            <div class="recipe-card">
+                                <div class="recipe-img">
+                                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80" alt="Food">
+                                </div>
+                                <div class="recipe-details">
+                                    <div class="rating">
+                                        <i class="ph-fill ph-star"></i>
+                                        <i class="ph-fill ph-star"></i>
+                                        <i class="ph-fill ph-star"></i>
+                                        <i class="ph-fill ph-star"></i>
+                                        <i class="ph-fill ph-star-half"></i>
+                                        <span>(128)</span>
+                                    </div>
+                                    <h4>Avocado Chicken Bowl</h4>
+                                    <div class="recipe-tags">
+                                        <span class="tag-text">High-Protein</span>
+                                        <span class="tag-text">Low-Carb</span>
+                                    </div>
+                                    <div class="nutrition-row">
+                                        <div class="nut-item">
+                                            <span class="label">Calories</span>
+                                            <span class="val">450</span>
+                                        </div>
+                                        <div class="nut-item">
+                                            <span class="label">Protein</span>
+                                            <span class="val">32g</span>
+                                        </div>
+                                        <div class="nut-item">
+                                            <span class="label">Prep</span>
+                                            <span class="val">15m</span>
+                                        </div>
+                                    </div>
+                                    <a href="meal-plans.html" class="btn-outline" style="text-align: center; display: block; text-decoration: none;">View Recipe</a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Wellness Quote -->
+                    <section class="quote-section">
+                        <div class="quote-card">
+                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&auto=format&fit=crop&q=80" alt="Nature" class="quote-bg">
+                            <div class="quote-overlay"></div>
+                            <div class="quote-content">
+                                <div class="quote-icon"><i class="ph-fill ph-quotes"></i></div>
+                                <h2 id="quote-text">"Take care of your body. It's the only place you have to live."</h2>
+                                <p id="quote-author">— Jim Rohn</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Sidebar Panel -->
+                <aside class="right-panel">
+                    <div class="panel-section">
+                        <h3>Body Goals</h3>
+                        <div class="goal-card">
+                            <div class="goal-header">
+                                <span>Weight</span>
+                                <span class="current">64.5 <small>kg</small></span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+                            <div class="goal-meta">
+                                <span>Start: 70kg</span>
+                                <span>Goal: 60kg</span>
+                            </div>
+                        </div>
+
+                        <div class="circular-chart-container">
+                            <div class="multi-ring-chart">
+                                <div class="ring-outer" style="--p:75; --c:#8b5cf6;"></div>
+                                <div class="ring-middle" style="--p:60; --c:#3b82f6;"></div>
+                                <div class="ring-inner" style="--p:40; --c:#ec4899;"></div>
+                                <div class="chart-label">
+                                    <span class="big">75%</span>
+                                    <span class="small">Daily Goal</span>
+                                </div>
+                            </div>
+                            <div class="chart-legend">
+                                <div class="legend-item"><span class="dot purple"></span> Fat Burn</div>
+                                <div class="legend-item"><span class="dot blue"></span> Hydration</div>
+                                <div class="legend-item"><span class="dot pink"></span> Muscle</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-section">
+                        <h3>Schedule</h3>
+                        <div class="reminders-list">
+                            <div class="reminder-item">
+                                <div class="icon-wrap blue-bg"><i class="ph-fill ph-drop"></i></div>
+                                <div class="reminder-info">
+                                    <h5>Drink Water</h5>
+                                    <span>14:00</span>
+                                </div>
+                                <div class="check-circle"></div>
+                            </div>
+                            <div class="reminder-item">
+                                <div class="icon-wrap purple-bg"><i class="ph-fill ph-person-simple-run"></i></div>
+                                <div class="reminder-info">
+                                    <h5>Afternoon Stretch</h5>
+                                    <span>15:30</span>
+                                </div>
+                                <div class="check-circle"></div>
+                            </div>
+                            <div class="reminder-item">
+                                <div class="icon-wrap green-bg"><i class="ph-fill ph-carrot"></i></div>
+                                <div class="reminder-info">
+                                    <h5>Meal Prep</h5>
+                                    <span>18:00</span>
+                                </div>
+                                <div class="check-circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

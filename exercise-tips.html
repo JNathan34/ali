@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Tips - FitWell UK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon">
+                    <i class="ph-fill ph-heart-beat"></i>
+                </div>
+                <span class="logo-text">FitWell UK</span>
+                <button id="close-sidebar" class="mobile-only-btn">
+                    <i class="ph ph-x"></i>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item">
+                    <i class="ph ph-squares-four"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="workout-videos.html" class="nav-item">
+                    <i class="ph ph-play-circle"></i>
+                    <span>Workout Videos</span>
+                </a>
+                <a href="exercise-tips.html" class="nav-item active">
+                    <i class="ph ph-lightning"></i>
+                    <span>Exercise Tips</span>
+                </a>
+                <a href="meal-plans.html" class="nav-item">
+                    <i class="ph ph-bowl-food"></i>
+                    <span>Meal Plans</span>
+                </a>
+                <a href="nutrition-guide.html" class="nav-item">
+                    <i class="ph ph-book-open"></i>
+                    <span>Nutrition Guide</span>
+                </a>
+                <a href="wellness-tips.html" class="nav-item">
+                    <i class="ph ph-plant"></i>
+                    <span>Wellness Tips</span>
+                </a>
+                <a href="motivation.html" class="nav-item">
+                    <i class="ph ph-star"></i>
+                    <span>Motivation</span>
+                </a>
+                <a href="calendar.html" class="nav-item">
+                    <i class="ph ph-calendar-blank"></i>
+                    <span>Calendar</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="bottom-nav">
+                    <a href="#" class="nav-item">
+                        <i class="ph ph-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="ph ph-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-nav">
+                <button id="menu-toggle" class="mobile-only-btn">
+                    <i class="ph ph-list"></i>
+                </button>
+                <div class="search-bar">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" placeholder="Search tips..." id="searchInput">
+                </div>
+                <div class="user-actions">
+                    <button class="icon-btn notification-btn">
+                        <i class="ph ph-bell"></i>
+                        <span class="badge"></span>
+                    </button>
+                    <div class="user-profile">
+                        <div class="user-info">
+                            <span class="name">Sarah Jenkins</span>
+                            <span class="role">Member</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=60" alt="User Avatar" class="avatar">
+                        <i class="ph ph-caret-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-scroll">
+                <div class="page-container">
+                    <div class="page-header">
+                        <h2>Exercise Guidance</h2>
+                        <p class="subtitle">Master your form and prevent injuries.</p>
+                    </div>
+
+                    <div class="tips-categories">
+                        <div class="category-card">
+                            <div class="icon-box blue">
+                                <i class="ph-fill ph-sneaker"></i>
+                            </div>
+                            <h3>Warm Up</h3>
+                            <p>Essential routines to prep your body.</p>
+                            <a href="#" class="link-arrow">Read More <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                        <div class="category-card">
+                            <div class="icon-box purple">
+                                <i class="ph-fill ph-barbell"></i>
+                            </div>
+                            <h3>Strength Form</h3>
+                            <p>Correct techniques for lifting.</p>
+                            <a href="#" class="link-arrow">Read More <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                        <div class="category-card">
+                            <div class="icon-box orange">
+                                <i class="ph-fill ph-heart-beat"></i>
+                            </div>
+                            <h3>Cardio Tips</h3>
+                            <p>Maximize endurance and heart health.</p>
+                            <a href="#" class="link-arrow">Read More <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                        <div class="category-card">
+                            <div class="icon-box green">
+                                <i class="ph-fill ph-leaf"></i>
+                            </div>
+                            <h3>Cool Down</h3>
+                            <p>Recovery stretches and breathing.</p>
+                            <a href="#" class="link-arrow">Read More <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <h3 class="section-title">Latest Articles</h3>
+                    <div class="articles-list">
+                        <article class="article-card">
+                            <img src="https://images.unsplash.com/photo-1574680096141-1cddd32e01f5?w=200&auto=format&fit=crop&q=60" alt="Squat">
+                            <div class="article-content">
+                                <span class="category-tag">Technique</span>
+                                <h4>The Perfect Squat: A Step-by-Step Guide</h4>
+                                <p>Learn the proper foot placement and depth for a safe squat.</p>
+                                <a href="#">Read Article</a>
+                            </div>
+                        </article>
+                        <article class="article-card">
+                            <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=200&auto=format&fit=crop&q=60" alt="Core">
+                            <div class="article-content">
+                                <span class="category-tag">Safety</span>
+                                <h4>Protecting Your Lower Back</h4>
+                                <p>How to engage your core to prevent back pain during workouts.</p>
+                                <a href="#">Read Article</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
